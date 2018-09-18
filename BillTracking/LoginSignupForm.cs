@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
-    public partial class Form1 : Form
+    public partial class LoginSignupForm : Form
     {
-        public Form1()
+        public LoginSignupForm()
         {
             InitializeComponent();
         }
