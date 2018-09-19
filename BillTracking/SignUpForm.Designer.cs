@@ -39,7 +39,7 @@
             this.orLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.loginLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // signUpLabel
@@ -149,17 +149,17 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "____";
             // 
-            // linkLabel1
+            // loginLinkLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(241, 685);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(78, 29);
-            this.linkLabel1.TabIndex = 11;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Login";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.loginLinkLabel.AutoSize = true;
+            this.loginLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginLinkLabel.Location = new System.Drawing.Point(241, 685);
+            this.loginLinkLabel.Name = "loginLinkLabel";
+            this.loginLinkLabel.Size = new System.Drawing.Size(78, 29);
+            this.loginLinkLabel.TabIndex = 11;
+            this.loginLinkLabel.TabStop = true;
+            this.loginLinkLabel.Text = "Login";
+            this.loginLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // SignUpForm
             // 
@@ -167,7 +167,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(580, 741);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.loginLinkLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.orLabel);
@@ -199,6 +199,6 @@
         private System.Windows.Forms.Label orLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel loginLinkLabel;
     }
 }
