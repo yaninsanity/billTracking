@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
-    public partial class LoginSignupForm : Form
+    public partial class LoginForm : Form
     {
-        public LoginSignupForm()
+        public LoginForm()
         {
             InitializeComponent();
-        }
 
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-            LoginForm objLoginForm = new LoginForm();
-            objLoginForm.Show();
+            // creates an asterisk in the password textbox
+            pinTextBox.PasswordChar = '*';
+
+            // if we want to have a max length for password, uncomment bottom line
+            //pinTextBox.MaxLength = 4;
         }
     }
 }
