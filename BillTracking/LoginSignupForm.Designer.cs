@@ -36,41 +36,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(309, 285);
+            this.label1.Location = new System.Drawing.Point(167, 198);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 25);
+            this.label1.Size = new System.Drawing.Size(23, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "OR";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(223, 134);
+            this.button1.Location = new System.Drawing.Point(125, 120);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 71);
+            this.button1.Size = new System.Drawing.Size(108, 37);
             this.button1.TabIndex = 1;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(223, 380);
+            this.button2.Location = new System.Drawing.Point(125, 248);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 76);
+            this.button2.Size = new System.Drawing.Size(108, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "Sign Up";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // LoginSignupForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 603);
+            this.ClientSize = new System.Drawing.Size(369, 372);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "LoginSignupForm";
-            this.Text = "Form1";
+            this.Text = "Bill Tracking";
             this.ResumeLayout(false);
             this.PerformLayout();
 
