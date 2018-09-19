@@ -10,26 +10,21 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
-    public partial class LoginSignupForm : Form
+    public partial class SignUpForm : Form
     {
-        public LoginSignupForm()
+        public SignUpForm()
         {
             InitializeComponent();
+            // creates an asterisk in the password textbox
+            pinTextBox.PasswordChar = '*';
+            reEnterPinTextBox.PasswordChar = '*';
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LoginForm objLoginForm = new LoginForm();
             objLoginForm.Show();
             this.Hide();
-        }
-
-        private void signUpButton_Click(object sender, EventArgs e)
-        {
-            SignUpForm objSignUpForm = new SignUpForm();
-            objSignUpForm.Show();
-            this.Hide();
-
         }
     }
 }

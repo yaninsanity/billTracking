@@ -22,5 +22,13 @@ namespace BillTracking
             // if we want to have a max length for password, uncomment bottom line
             //pinTextBox.MaxLength = 4;
         }
+
+        private void signUpLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm objSignUpForm = new SignUpForm();
+            objSignUpForm.Show();
+            this.Hide();
+        }
+
     }
 }
