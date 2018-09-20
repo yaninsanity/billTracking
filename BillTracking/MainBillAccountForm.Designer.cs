@@ -82,7 +82,7 @@
             this.accountListBox.ItemHeight = 29;
             this.accountListBox.Location = new System.Drawing.Point(46, 236);
             this.accountListBox.Name = "accountListBox";
-            this.accountListBox.Size = new System.Drawing.Size(606, 323);
+            this.accountListBox.Size = new System.Drawing.Size(580, 323);
             this.accountListBox.TabIndex = 4;
             // 
             // updateButton
@@ -103,16 +103,16 @@
             this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
             this.yourAccountLabel.Name = "yourAccountLabel";
-            this.yourAccountLabel.Size = new System.Drawing.Size(506, 78);
+            this.yourAccountLabel.Size = new System.Drawing.Size(181, 78);
             this.yourAccountLabel.TabIndex = 5;
-            this.yourAccountLabel.Text = "Your Account";
+            this.yourAccountLabel.Text = "Bills";
             // 
             // MainBillAccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(709, 618);
+            this.ClientSize = new System.Drawing.Size(661, 610);
             this.Controls.Add(this.yourAccountLabel);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.accountListBox);
