@@ -32,16 +32,18 @@
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.accountListBox = new System.Windows.Forms.ListBox();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.yourAccountLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // logoutLinkLabel
             // 
             this.logoutLinkLabel.AutoSize = true;
             this.logoutLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutLinkLabel.Location = new System.Drawing.Point(555, 25);
+            this.logoutLinkLabel.Location = new System.Drawing.Point(530, 10);
             this.logoutLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.logoutLinkLabel.Name = "logoutLinkLabel";
-            this.logoutLinkLabel.Size = new System.Drawing.Size(65, 20);
+            this.logoutLinkLabel.Size = new System.Drawing.Size(122, 37);
             this.logoutLinkLabel.TabIndex = 0;
             this.logoutLinkLabel.TabStop = true;
             this.logoutLinkLabel.Text = "Logout";
@@ -49,51 +51,77 @@
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.Black;
-            this.addButton.Location = new System.Drawing.Point(72, 77);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.ForeColor = System.Drawing.Color.White;
+            this.addButton.Location = new System.Drawing.Point(46, 139);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(150, 74);
             this.addButton.TabIndex = 1;
             this.addButton.Text = "ADD";
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.ForeColor = System.Drawing.Color.Black;
-            this.deleteButton.Location = new System.Drawing.Point(252, 77);
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.Location = new System.Drawing.Point(476, 139);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(150, 74);
-            this.deleteButton.TabIndex = 2;
+            this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "DELETE";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             // 
             // accountListBox
             // 
             this.accountListBox.FormattingEnabled = true;
-            this.accountListBox.ItemHeight = 15;
-            this.accountListBox.Location = new System.Drawing.Point(33, 174);
+            this.accountListBox.ItemHeight = 29;
+            this.accountListBox.Location = new System.Drawing.Point(46, 236);
             this.accountListBox.Name = "accountListBox";
-            this.accountListBox.Size = new System.Drawing.Size(494, 229);
-            this.accountListBox.TabIndex = 3;
+            this.accountListBox.Size = new System.Drawing.Size(606, 323);
+            this.accountListBox.TabIndex = 4;
+            // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.updateButton.ForeColor = System.Drawing.Color.White;
+            this.updateButton.Location = new System.Drawing.Point(253, 139);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(4);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(150, 74);
+            this.updateButton.TabIndex = 2;
+            this.updateButton.Text = "UPDATE";
+            this.updateButton.UseVisualStyleBackColor = false;
+            // 
+            // yourAccountLabel
+            // 
+            this.yourAccountLabel.AutoSize = true;
+            this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
+            this.yourAccountLabel.Name = "yourAccountLabel";
+            this.yourAccountLabel.Size = new System.Drawing.Size(506, 78);
+            this.yourAccountLabel.TabIndex = 5;
+            this.yourAccountLabel.Text = "Your Account";
             // 
             // MainBillAccountForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(627, 446);
+            this.ClientSize = new System.Drawing.Size(709, 618);
+            this.Controls.Add(this.yourAccountLabel);
+            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.accountListBox);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.logoutLinkLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainBillAccountForm";
             this.Text = "Your Account ";
             this.Load += new System.EventHandler(this.MainBillAccountForm_Load);
@@ -108,5 +136,7 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.ListBox accountListBox;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Label yourAccountLabel;
     }
 }
