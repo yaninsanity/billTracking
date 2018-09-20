@@ -30,5 +30,12 @@ namespace BillTracking
             this.Hide();
         }
 
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            MainBillAccountForm objMainBillAccountForm = new MainBillAccountForm();
+            objMainBillAccountForm.Show();
+            this.Hide();
+        }
+
     }
 }
