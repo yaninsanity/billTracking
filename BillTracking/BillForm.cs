@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
+    //Need to link this form to the main form to grab the list info synced from AddBillForm when a bill is changed.
+
     public partial class BillForm : Form
     {
         public BillForm()
@@ -36,6 +38,13 @@ namespace BillTracking
         {
             HomePage objHomePage = new HomePage();
             objHomePage.Show();
+            this.Hide();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            AddBillForm addBillForm = new AddBillForm();
+            addBillForm.Show();
             this.Hide();
         }
     }

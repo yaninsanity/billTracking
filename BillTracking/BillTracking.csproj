@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBillForm.Designer.cs">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillClass.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -78,6 +84,9 @@
     <Compile Include="SignUpForm.Designer.cs">
       <DependentUpon>SignUpForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddBillForm.resx">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
