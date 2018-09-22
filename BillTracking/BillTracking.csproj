@@ -58,11 +58,17 @@
     <Compile Include="LoginSignupForm.Designer.cs">
       <DependentUpon>LoginSignupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainBillAccountForm.cs">
+    <Compile Include="BillForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainBillAccountForm.Designer.cs">
-      <DependentUpon>MainBillAccountForm.cs</DependentUpon>
+    <Compile Include="BillForm.Designer.cs">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +84,11 @@
     <EmbeddedResource Include="LoginSignupForm.resx">
       <DependentUpon>LoginSignupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainBillAccountForm.resx">
-      <DependentUpon>MainBillAccountForm.cs</DependentUpon>
+    <EmbeddedResource Include="BillForm.resx">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
-    public partial class MainBillAccountForm : Form
+    public partial class HomePage : Form
     {
-        public MainBillAccountForm()
+        public HomePage()
         {
             InitializeComponent();
         }
@@ -32,14 +32,11 @@ namespace BillTracking
             }
         }
 
-        private void MainBillAccountForm_Load(object sender, EventArgs e)
+        private void billMgtLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            BillForm objBillForm = new BillForm();
+            objBillForm.Show();
+            this.Hide();
         }
     }
 }
