@@ -1,6 +1,6 @@
 ﻿namespace BillTracking
 {
-    partial class MainBillAccountForm
+    partial class BillForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,10 @@
             this.logoutLinkLabel = new System.Windows.Forms.LinkLabel();
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.accountListBox = new System.Windows.Forms.ListBox();
+            this.billListBox = new System.Windows.Forms.ListBox();
             this.updateButton = new System.Windows.Forms.Button();
             this.yourAccountLabel = new System.Windows.Forms.Label();
+            this.homeLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // logoutLinkLabel
@@ -43,7 +44,7 @@
             this.logoutLinkLabel.Location = new System.Drawing.Point(530, 10);
             this.logoutLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.logoutLinkLabel.Name = "logoutLinkLabel";
-            this.logoutLinkLabel.Size = new System.Drawing.Size(122, 37);
+            this.logoutLinkLabel.Size = new System.Drawing.Size(65, 20);
             this.logoutLinkLabel.TabIndex = 0;
             this.logoutLinkLabel.TabStop = true;
             this.logoutLinkLabel.Text = "Logout";
@@ -61,7 +62,7 @@
             this.addButton.TabIndex = 1;
             this.addButton.Text = "ADD";
             this.addButton.UseVisualStyleBackColor = false;
-            this.addButton.Click += new System.EventHandler(this.button1_Click);
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -76,20 +77,20 @@
             this.deleteButton.Text = "DELETE";
             this.deleteButton.UseVisualStyleBackColor = false;
             // 
-            // accountListBox
+            // billListBox
             // 
-            this.accountListBox.FormattingEnabled = true;
-            this.accountListBox.ItemHeight = 29;
-            this.accountListBox.Location = new System.Drawing.Point(46, 236);
-            this.accountListBox.Name = "accountListBox";
-            this.accountListBox.Size = new System.Drawing.Size(580, 323);
-            this.accountListBox.TabIndex = 4;
+            this.billListBox.FormattingEnabled = true;
+            this.billListBox.ItemHeight = 15;
+            this.billListBox.Location = new System.Drawing.Point(46, 236);
+            this.billListBox.Name = "billListBox";
+            this.billListBox.Size = new System.Drawing.Size(580, 319);
+            this.billListBox.TabIndex = 4;
             // 
             // updateButton
             // 
             this.updateButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.updateButton.ForeColor = System.Drawing.Color.White;
-            this.updateButton.Location = new System.Drawing.Point(253, 139);
+            this.updateButton.Location = new System.Drawing.Point(257, 139);
             this.updateButton.Margin = new System.Windows.Forms.Padding(4);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(150, 74);
@@ -103,28 +104,40 @@
             this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
             this.yourAccountLabel.Name = "yourAccountLabel";
-            this.yourAccountLabel.Size = new System.Drawing.Size(181, 78);
+            this.yourAccountLabel.Size = new System.Drawing.Size(95, 40);
             this.yourAccountLabel.TabIndex = 5;
             this.yourAccountLabel.Text = "Bills";
             // 
-            // MainBillAccountForm
+            // homeLinkLabel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.homeLinkLabel.AutoSize = true;
+            this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeLinkLabel.Location = new System.Drawing.Point(403, 10);
+            this.homeLinkLabel.Name = "homeLinkLabel";
+            this.homeLinkLabel.Size = new System.Drawing.Size(56, 20);
+            this.homeLinkLabel.TabIndex = 6;
+            this.homeLinkLabel.TabStop = true;
+            this.homeLinkLabel.Text = "Home";
+            this.homeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.homeLinkLabel_LinkClicked);
+            // 
+            // BillForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(661, 610);
+            this.Controls.Add(this.homeLinkLabel);
             this.Controls.Add(this.yourAccountLabel);
             this.Controls.Add(this.updateButton);
-            this.Controls.Add(this.accountListBox);
+            this.Controls.Add(this.billListBox);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.logoutLinkLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "MainBillAccountForm";
-            this.Text = "Your Account ";
-            this.Load += new System.EventHandler(this.MainBillAccountForm_Load);
+            this.Name = "BillForm";
+            this.Text = "Bills";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,8 +148,9 @@
         private System.Windows.Forms.LinkLabel logoutLinkLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.ListBox accountListBox;
+        private System.Windows.Forms.ListBox billListBox;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label yourAccountLabel;
+        private System.Windows.Forms.LinkLabel homeLinkLabel;
     }
 }
