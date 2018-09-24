@@ -8,9 +8,9 @@ namespace BillTracking
 {
     public class Account
     {
-        private string username;
-        private string pin;
-        private string email;
+        string username;
+        string pin;
+        string email;
 
         public Account(string username, string pin, string email)
         {
