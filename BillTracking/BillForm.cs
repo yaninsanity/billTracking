@@ -26,15 +26,7 @@ namespace BillTracking
         
         private void logoutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Dialog Title", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            else
-            {
 
-            }
         }
 
         private void homeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -65,5 +57,6 @@ namespace BillTracking
             updateBillForm = new UpdateBillForm(billListBox.SelectedItem);
             updateBillForm.Show();
         }
+
     }
 }

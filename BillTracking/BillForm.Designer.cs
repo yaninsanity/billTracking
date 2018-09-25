@@ -39,16 +39,10 @@
             // 
             // logoutLinkLabel
             // 
-            this.logoutLinkLabel.AutoSize = true;
-            this.logoutLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutLinkLabel.Location = new System.Drawing.Point(530, 10);
-            this.logoutLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.logoutLinkLabel.Location = new System.Drawing.Point(0, 0);
             this.logoutLinkLabel.Name = "logoutLinkLabel";
-            this.logoutLinkLabel.Size = new System.Drawing.Size(65, 20);
-            this.logoutLinkLabel.TabIndex = 0;
-            this.logoutLinkLabel.TabStop = true;
-            this.logoutLinkLabel.Text = "Logout";
-            this.logoutLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logoutLinkLabel_LinkClicked);
+            this.logoutLinkLabel.Size = new System.Drawing.Size(100, 23);
+            this.logoutLinkLabel.TabIndex = 7;
             // 
             // addButton
             // 
@@ -80,10 +74,10 @@
             // billListBox
             // 
             this.billListBox.FormattingEnabled = true;
-            this.billListBox.ItemHeight = 15;
+            this.billListBox.ItemHeight = 29;
             this.billListBox.Location = new System.Drawing.Point(46, 236);
             this.billListBox.Name = "billListBox";
-            this.billListBox.Size = new System.Drawing.Size(580, 319);
+            this.billListBox.Size = new System.Drawing.Size(580, 294);
             this.billListBox.TabIndex = 4;
             // 
             // updateButton
@@ -105,7 +99,7 @@
             this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
             this.yourAccountLabel.Name = "yourAccountLabel";
-            this.yourAccountLabel.Size = new System.Drawing.Size(95, 40);
+            this.yourAccountLabel.Size = new System.Drawing.Size(181, 78);
             this.yourAccountLabel.TabIndex = 5;
             this.yourAccountLabel.Text = "Bills";
             // 
@@ -113,9 +107,9 @@
             // 
             this.homeLinkLabel.AutoSize = true;
             this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLinkLabel.Location = new System.Drawing.Point(403, 10);
+            this.homeLinkLabel.Location = new System.Drawing.Point(520, 9);
             this.homeLinkLabel.Name = "homeLinkLabel";
-            this.homeLinkLabel.Size = new System.Drawing.Size(56, 20);
+            this.homeLinkLabel.Size = new System.Drawing.Size(106, 37);
             this.homeLinkLabel.TabIndex = 6;
             this.homeLinkLabel.TabStop = true;
             this.homeLinkLabel.Text = "Home";
@@ -123,7 +117,7 @@
             // 
             // BillForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(661, 610);
