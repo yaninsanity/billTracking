@@ -97,6 +97,7 @@
             this.updateButton.TabIndex = 2;
             this.updateButton.Text = "UPDATE";
             this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // yourAccountLabel
             // 

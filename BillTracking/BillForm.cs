@@ -16,6 +16,7 @@ namespace BillTracking
         public event BillDelegate NewBillSaved;
 
         AddBillForm addBillForm;
+        UpdateBillForm updateBillForm;
 
         public BillForm(List<Bill> e)
         {
@@ -57,6 +58,12 @@ namespace BillTracking
             billListBox.Items.Add(e.Name);
             if (NewBillSaved != null)
                 NewBillSaved(this, e);
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            updateBillForm = new UpdateBillForm(billListBox.SelectedItem);
+            updateBillForm.Show();
         }
     }
 }

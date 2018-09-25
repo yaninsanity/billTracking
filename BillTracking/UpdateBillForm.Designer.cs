@@ -37,7 +37,7 @@
             this.BillDateDateTimelabel = new System.Windows.Forms.Label();
             this.namelabel = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.ConfirmButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.UpdateBillLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -120,17 +120,17 @@
             this.NameTextBox.Size = new System.Drawing.Size(100, 20);
             this.NameTextBox.TabIndex = 16;
             // 
-            // ConfirmButton
+            // SaveButton
             // 
-            this.ConfirmButton.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmButton.Location = new System.Drawing.Point(286, 260);
-            this.ConfirmButton.Name = "ConfirmButton";
-            this.ConfirmButton.Size = new System.Drawing.Size(75, 23);
-            this.ConfirmButton.TabIndex = 15;
-            this.ConfirmButton.Text = "Confirm!";
-            this.ConfirmButton.UseVisualStyleBackColor = false;
+            this.SaveButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.ForeColor = System.Drawing.Color.White;
+            this.SaveButton.Location = new System.Drawing.Point(286, 260);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveButton.TabIndex = 15;
+            this.SaveButton.Text = "Save!";
+            this.SaveButton.UseVisualStyleBackColor = false;
             // 
             // UpdateBillLabel
             // 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.BillDateDateTimelabel);
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.NameTextBox);
-            this.Controls.Add(this.ConfirmButton);
+            this.Controls.Add(this.SaveButton);
             this.Name = "UpdateBillForm";
             this.Text = "Update Bill!";
             this.ResumeLayout(false);
@@ -177,7 +177,7 @@
         private System.Windows.Forms.Label BillDateDateTimelabel;
         private System.Windows.Forms.Label namelabel;
         private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.Button ConfirmButton;
+        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Label UpdateBillLabel;
     }
 }
