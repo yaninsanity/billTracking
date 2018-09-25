@@ -35,6 +35,7 @@
             this.updateButton = new System.Windows.Forms.Button();
             this.yourAccountLabel = new System.Windows.Forms.Label();
             this.homeLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // logoutLinkLabel
@@ -63,7 +64,7 @@
             this.deleteButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(476, 139);
+            this.deleteButton.Location = new System.Drawing.Point(578, 139);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(150, 74);
@@ -77,14 +78,14 @@
             this.billListBox.ItemHeight = 29;
             this.billListBox.Location = new System.Drawing.Point(46, 236);
             this.billListBox.Name = "billListBox";
-            this.billListBox.Size = new System.Drawing.Size(580, 294);
+            this.billListBox.Size = new System.Drawing.Size(682, 381);
             this.billListBox.TabIndex = 4;
             // 
             // updateButton
             // 
             this.updateButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.updateButton.ForeColor = System.Drawing.Color.White;
-            this.updateButton.Location = new System.Drawing.Point(257, 139);
+            this.updateButton.Location = new System.Drawing.Point(219, 139);
             this.updateButton.Margin = new System.Windows.Forms.Padding(4);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(150, 74);
@@ -107,7 +108,7 @@
             // 
             this.homeLinkLabel.AutoSize = true;
             this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeLinkLabel.Location = new System.Drawing.Point(520, 9);
+            this.homeLinkLabel.Location = new System.Drawing.Point(660, 9);
             this.homeLinkLabel.Name = "homeLinkLabel";
             this.homeLinkLabel.Size = new System.Drawing.Size(106, 37);
             this.homeLinkLabel.TabIndex = 6;
@@ -115,12 +116,25 @@
             this.homeLinkLabel.Text = "Home";
             this.homeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.homeLinkLabel_LinkClicked);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(399, 139);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 74);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "ARCHIVE";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // BillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(661, 610);
+            this.ClientSize = new System.Drawing.Size(789, 676);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.homeLinkLabel);
             this.Controls.Add(this.yourAccountLabel);
             this.Controls.Add(this.updateButton);
@@ -148,5 +162,6 @@
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label yourAccountLabel;
         private System.Windows.Forms.LinkLabel homeLinkLabel;
+        private System.Windows.Forms.Button button1;
     }
 }
