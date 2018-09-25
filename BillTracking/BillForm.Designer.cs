@@ -64,7 +64,7 @@
             this.deleteButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(578, 139);
+            this.deleteButton.Location = new System.Drawing.Point(578, 107);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(150, 74);
