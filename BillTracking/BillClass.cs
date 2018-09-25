@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BillTracking
 {
-    class Bill
+    public partial class Bill
     {
         string name;
         string date;

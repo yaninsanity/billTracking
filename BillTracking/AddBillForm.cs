@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
-
-    //Need to create a link between main form list and this list to refresh when something is added to this form.
+    public delegate void BillDelegate(object sender, Bill e);
 
     public partial class AddBillForm : Form
     {
-        List<Bill> BillList = new List<Bill>();
+        //Public event for the creation of an bill
+        public event BillDelegate NewBillCreated;
 
-        double Amount;            
+        double Amount;
 
         public AddBillForm()
         {
             InitializeComponent();            
-        }
+        }              
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            BillForm BillTracking = new BillForm();
-            BillTracking.Show();
             this.Hide();
         }
 
@@ -43,11 +41,21 @@ namespace BillTracking
                 return;
             }
 
-            Bill NewBill = new Bill(NameTextBox.Text, BillDateTime.Text, Amount, recurrenceComboBox.Text);
-            BillList.Add(NewBill);
-            BillForm BillTracking = new BillForm();
-            BillTracking.Show();
+            Bill tmpBill = new Bill(NameTextBox.Text, BillDateTime.Text, Amount, recurrenceComboBox.Text);
+
+            if (NewBillCreated != null)
+                NewBillCreated(this, tmpBill);
+
+            //Message Box to tell an account was created succesfully
+            MessageBox.Show("Bill Created Successfully");
+
+            NameTextBox.Text = null;
+            BillDateTime.Text = null;
+            AmountTextBox.Text = null;
+            recurrenceComboBox.Text = null;
+
             this.Hide();
+    
         }
     }
 }

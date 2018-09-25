@@ -138,6 +138,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BillForm";
             this.Text = "Bills";
+            this.Load += new System.EventHandler(this.SetEventHandlers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

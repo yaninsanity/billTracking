@@ -38,6 +38,7 @@
             this.BillDateTime = new System.Windows.Forms.DateTimePicker();
             this.AmountLabel = new System.Windows.Forms.Label();
             this.AmountTextBox = new System.Windows.Forms.TextBox();
+            this.AddBillLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ConfirmButton
@@ -45,7 +46,7 @@
             this.ConfirmButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.ConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmButton.ForeColor = System.Drawing.Color.White;
-            this.ConfirmButton.Location = new System.Drawing.Point(279, 229);
+            this.ConfirmButton.Location = new System.Drawing.Point(286, 260);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(75, 23);
             this.ConfirmButton.TabIndex = 0;
@@ -55,7 +56,7 @@
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(110, 29);
+            this.NameTextBox.Location = new System.Drawing.Point(117, 77);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(100, 20);
             this.NameTextBox.TabIndex = 1;
@@ -63,7 +64,7 @@
             // namelabel
             // 
             this.namelabel.AutoSize = true;
-            this.namelabel.Location = new System.Drawing.Point(13, 36);
+            this.namelabel.Location = new System.Drawing.Point(20, 84);
             this.namelabel.Name = "namelabel";
             this.namelabel.Size = new System.Drawing.Size(51, 13);
             this.namelabel.TabIndex = 5;
@@ -72,7 +73,7 @@
             // BillDateDateTimelabel
             // 
             this.BillDateDateTimelabel.AutoSize = true;
-            this.BillDateDateTimelabel.Location = new System.Drawing.Point(13, 80);
+            this.BillDateDateTimelabel.Location = new System.Drawing.Point(20, 128);
             this.BillDateDateTimelabel.Name = "BillDateDateTimelabel";
             this.BillDateDateTimelabel.Size = new System.Drawing.Size(46, 13);
             this.BillDateDateTimelabel.TabIndex = 6;
@@ -81,7 +82,7 @@
             // BillRecurrencelabel
             // 
             this.BillRecurrencelabel.AutoSize = true;
-            this.BillRecurrencelabel.Location = new System.Drawing.Point(12, 126);
+            this.BillRecurrencelabel.Location = new System.Drawing.Point(19, 174);
             this.BillRecurrencelabel.Name = "BillRecurrencelabel";
             this.BillRecurrencelabel.Size = new System.Drawing.Size(63, 13);
             this.BillRecurrencelabel.TabIndex = 7;
@@ -89,7 +90,7 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(189, 229);
+            this.CancelButton.Location = new System.Drawing.Point(196, 260);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(75, 23);
             this.CancelButton.TabIndex = 9;
@@ -105,14 +106,14 @@
             "Weekly",
             "Monthly",
             "Yearly"});
-            this.recurrenceComboBox.Location = new System.Drawing.Point(110, 117);
+            this.recurrenceComboBox.Location = new System.Drawing.Point(117, 165);
             this.recurrenceComboBox.Name = "recurrenceComboBox";
             this.recurrenceComboBox.Size = new System.Drawing.Size(121, 21);
             this.recurrenceComboBox.TabIndex = 10;
             // 
             // BillDateTime
             // 
-            this.BillDateTime.Location = new System.Drawing.Point(110, 72);
+            this.BillDateTime.Location = new System.Drawing.Point(117, 120);
             this.BillDateTime.Name = "BillDateTime";
             this.BillDateTime.Size = new System.Drawing.Size(200, 20);
             this.BillDateTime.TabIndex = 12;
@@ -120,7 +121,7 @@
             // AmountLabel
             // 
             this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Location = new System.Drawing.Point(16, 170);
+            this.AmountLabel.Location = new System.Drawing.Point(23, 218);
             this.AmountLabel.Name = "AmountLabel";
             this.AmountLabel.Size = new System.Drawing.Size(43, 13);
             this.AmountLabel.TabIndex = 13;
@@ -128,16 +129,28 @@
             // 
             // AmountTextBox
             // 
-            this.AmountTextBox.Location = new System.Drawing.Point(110, 163);
+            this.AmountTextBox.Location = new System.Drawing.Point(117, 211);
             this.AmountTextBox.Name = "AmountTextBox";
             this.AmountTextBox.Size = new System.Drawing.Size(100, 20);
             this.AmountTextBox.TabIndex = 14;
+            // 
+            // AddBillLabel
+            // 
+            this.AddBillLabel.AutoSize = true;
+            this.AddBillLabel.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBillLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.AddBillLabel.Location = new System.Drawing.Point(21, 22);
+            this.AddBillLabel.Name = "AddBillLabel";
+            this.AddBillLabel.Size = new System.Drawing.Size(134, 27);
+            this.AddBillLabel.TabIndex = 26;
+            this.AddBillLabel.Text = "Add a Bill";
             // 
             // AddBillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 264);
+            this.ClientSize = new System.Drawing.Size(373, 299);
+            this.Controls.Add(this.AddBillLabel);
             this.Controls.Add(this.AmountTextBox);
             this.Controls.Add(this.AmountLabel);
             this.Controls.Add(this.BillDateTime);
@@ -167,5 +180,6 @@
         private System.Windows.Forms.DateTimePicker BillDateTime;
         private System.Windows.Forms.Label AmountLabel;
         private System.Windows.Forms.TextBox AmountTextBox;
+        private System.Windows.Forms.Label AddBillLabel;
     }
 }

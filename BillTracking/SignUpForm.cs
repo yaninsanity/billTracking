@@ -53,7 +53,7 @@ namespace BillTracking
 
             if (rgex.IsMatch(usernameTextBox.Text))
             {
-                MessageBox.Show("Please do not have space or special character in the username");
+                MessageBox.Show("Please do not have a space or special character in the username");
                 return;
             }
 
@@ -63,7 +63,7 @@ namespace BillTracking
 
             if (rgexPin.IsMatch(pinTextBox.Text))
             {
-                MessageBox.Show("Please only enter number for pin");
+                MessageBox.Show("Please only enter numbers for your pin");
                 return;
             }
 
@@ -97,6 +97,7 @@ namespace BillTracking
             accountList.Add(tmpAccount);
 
             //Message Box to tell an account was created succesfully
+            //////////We should change this to a dialog on the bottom of the window.
             MessageBox.Show("Account Created Successfully");
 
             //Clear out all the fields for next account
