@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace BillTracking
 {
@@ -99,6 +101,12 @@ namespace BillTracking
             //Message Box to tell an account was created succesfully
             //////////We should change this to a dialog on the bottom of the window.
             MessageBox.Show("Account Created Successfully");
+
+            //Save the accounts into a data file
+            FileStream file = new FileStream("myAccounts.dat", FileMode.Create, FileAccess.Write);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(file, accountList);
+            file.Close();
 
             //Clear out all the fields for next account
             usernameTextBox.Clear();
