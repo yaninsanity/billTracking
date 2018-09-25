@@ -64,7 +64,7 @@
             this.deleteButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(578, 107);
+            this.deleteButton.Location = new System.Drawing.Point(578, 139);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(150, 74);
@@ -75,10 +75,10 @@
             // billListBox
             // 
             this.billListBox.FormattingEnabled = true;
-            this.billListBox.ItemHeight = 15;
+            this.billListBox.ItemHeight = 18;
             this.billListBox.Location = new System.Drawing.Point(46, 236);
             this.billListBox.Name = "billListBox";
-            this.billListBox.Size = new System.Drawing.Size(682, 379);
+            this.billListBox.Size = new System.Drawing.Size(682, 364);
             this.billListBox.TabIndex = 4;
             // 
             // updateButton
@@ -100,7 +100,7 @@
             this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
             this.yourAccountLabel.Name = "yourAccountLabel";
-            this.yourAccountLabel.Size = new System.Drawing.Size(95, 40);
+            this.yourAccountLabel.Size = new System.Drawing.Size(116, 49);
             this.yourAccountLabel.TabIndex = 5;
             this.yourAccountLabel.Text = "Bills";
             // 
@@ -110,7 +110,7 @@
             this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLinkLabel.Location = new System.Drawing.Point(660, 9);
             this.homeLinkLabel.Name = "homeLinkLabel";
-            this.homeLinkLabel.Size = new System.Drawing.Size(56, 20);
+            this.homeLinkLabel.Size = new System.Drawing.Size(68, 25);
             this.homeLinkLabel.TabIndex = 6;
             this.homeLinkLabel.TabStop = true;
             this.homeLinkLabel.Text = "Home";
@@ -130,7 +130,7 @@
             // 
             // BillForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(789, 676);
