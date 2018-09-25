@@ -120,7 +120,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(397, 34);
+            this.button1.Location = new System.Drawing.Point(398, 139);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 74);
