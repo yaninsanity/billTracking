@@ -23,7 +23,7 @@ namespace BillTracking
 
         private void logoutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Dialog Title", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 //This is where saving needs to be implemented.
