@@ -26,6 +26,21 @@ namespace BillTracking
             }
         }
 
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+              double  Amount = Convert.ToDouble(AmountTextBox.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter only numbers & decimals into the Amount Textbox","Failed");
+                return;
+            }
 
+
+
+
+        }
     }
 }

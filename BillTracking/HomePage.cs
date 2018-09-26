@@ -12,8 +12,8 @@ namespace BillTracking
 {
     public partial class HomePage : Form
     {
-        public List<Bill> BillMasterList = new List<Bill>();
-
+        //public List<Bill> BillMasterList = new List<Bill>();
+        public BindingList<Bill> BillMasterList = new BindingList<Bill>();
         BillForm BillForm;
 
         public HomePage()
