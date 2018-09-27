@@ -71,6 +71,7 @@
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "DELETE";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // billListBox
             // 

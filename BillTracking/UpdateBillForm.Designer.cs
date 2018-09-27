@@ -85,6 +85,7 @@
             this.CancelButton.TabIndex = 20;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // BillRecurrencelabel
             // 
@@ -131,6 +132,7 @@
             this.SaveButton.TabIndex = 15;
             this.SaveButton.Text = "Save!";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // UpdateBillLabel
             // 

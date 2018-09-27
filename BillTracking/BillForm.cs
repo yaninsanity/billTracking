@@ -10,18 +10,20 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
+    public delegate void BillDelegate(object sender, Bill e);
+
     public partial class BillForm : Form
     {
         //Public event for the creation of an bill
-        public event BillDelegate NewBillSaved;
-
+        BindingList<Bill>myBillList = new BindingList<Bill>();
         AddBillForm addBillForm;
         UpdateBillForm updateBillForm;
 
-        public BillForm(List<Bill> e)
+        public BillForm(BindingList<Bill> e)
         {
             InitializeComponent();
-            billListBox.Items.Add(e);
+            myBillList = e;
+            billListBox.DataSource = e;
         }
         
         private void logoutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -47,16 +49,41 @@ namespace BillTracking
 
         private void AddBillForm_BillCreated(object sender, Bill e)
         {
-            billListBox.Items.Add(e.Name);
-            if (NewBillSaved != null)
-                NewBillSaved(this, e);
+            myBillList.Add(e);
+            billListBox.Refresh();
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            updateBillForm = new UpdateBillForm(billListBox.SelectedItem);
-            updateBillForm.Show();
+
+            if (billListBox.SelectedItem == null)
+            { MessageBox.Show("Please select a bill", "Error"); }
+            else
+            {
+                updateBillForm = new UpdateBillForm((Bill)billListBox.SelectedItem);
+                updateBillForm.Show();
+            }            
+            
         }
 
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (billListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select the item to delete", "Failed");
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this item?", "Warning", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    myBillList.Remove((Bill)billListBox.SelectedItem); 
+                }
+                else
+                {
+
+                }
+            }
+        }
     }
 }

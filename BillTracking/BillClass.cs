@@ -25,5 +25,13 @@ namespace BillTracking
         public string Date { get => date; set => date = value; }
         public double Amount { get => amount; set => amount = value; }
         public string Recurrence { get => recurrence; set => recurrence = value; }
+
+
+
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }  
 }

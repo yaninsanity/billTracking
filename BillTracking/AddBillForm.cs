@@ -9,9 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BillTracking
-{
-    public delegate void BillDelegate(object sender, Bill e);
-
+{ 
     public partial class AddBillForm : Form
     {
         //Public event for the creation of an bill
