@@ -59,9 +59,6 @@
     <Compile Include="EmailForm.Designer.cs">
       <DependentUpon>EmailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

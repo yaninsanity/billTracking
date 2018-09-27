@@ -63,7 +63,7 @@
             this.emailTextbox.Size = new System.Drawing.Size(294, 28);
             this.emailTextbox.TabIndex = 3;
             this.emailTextbox.Text = "Example) hwoo11@asu.edu";
-            this.emailTextbox.TextChanged += new System.EventHandler(this.emailTextbox_TextChanged);
+            this.emailTextbox.Click += new System.EventHandler(this.emailTextbox_Click);
             // 
             // referLabel
             // 
@@ -75,7 +75,7 @@
             this.referLabel.TabIndex = 4;
             this.referLabel.Text = "Refer Friend";
             // 
-            // Email
+            // EmailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.emailTextbox);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.emailLabel);
-            this.Name = "Email";
+            this.Name = "EmailForm";
             this.Text = "Email";
             this.ResumeLayout(false);
             this.PerformLayout();
