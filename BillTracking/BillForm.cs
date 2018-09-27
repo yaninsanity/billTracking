@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace BillTracking
 {
+    public delegate void BillDelegate(object sender, Bill e);
+
     public partial class BillForm : Form
     {
         //Public event for the creation of an bill
-        public event BillDelegate NewBillSaved;
         BindingList<Bill>myBillList = new BindingList<Bill>();
         AddBillForm addBillForm;
         UpdateBillForm updateBillForm;
@@ -21,7 +22,6 @@ namespace BillTracking
         public BillForm(BindingList<Bill> e)
         {
             InitializeComponent();
-            //billListBox.Items.Add(e);                       ----(zy)
             myBillList = e;
             billListBox.DataSource = e;
         }
@@ -49,11 +49,8 @@ namespace BillTracking
 
         private void AddBillForm_BillCreated(object sender, Bill e)
         {
-            //billListBox.Items.Add(e.Name);                --zy
             myBillList.Add(e);
             billListBox.Refresh();
-            //if (NewBillSaved != null)
-            //    NewBillSaved(this, e);
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -65,8 +62,7 @@ namespace BillTracking
             {
                 updateBillForm = new UpdateBillForm((Bill)billListBox.SelectedItem);
                 updateBillForm.Show();
-            }
-            
+            }            
             
         }
 
@@ -74,7 +70,7 @@ namespace BillTracking
         {
             if (billListBox.SelectedItem == null)
             {
-                MessageBox.Show("Please select the item to delte", "Failed");
+                MessageBox.Show("Please select the item to delete", "Failed");
             }
             else
             {

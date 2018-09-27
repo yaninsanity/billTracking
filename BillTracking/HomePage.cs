@@ -12,7 +12,6 @@ namespace BillTracking
 {
     public partial class HomePage : Form
     {
-        //public List<Bill> BillMasterList = new List<Bill>();
         public BindingList<Bill> BillMasterList = new BindingList<Bill>();
         BillForm BillForm;
 
@@ -45,7 +44,6 @@ namespace BillTracking
         private void SetEventHandlers_Load(object sender, EventArgs e)
         {
             BillForm = new BillForm(BillMasterList);
-            BillForm.NewBillSaved += new BillDelegate(this.ManageBillForm_BillCreated);
         }
 
         private void ManageBillForm_BillCreated(object sender, Bill e)
