@@ -53,11 +53,11 @@
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BillClass.cs" />
-    <Compile Include="Email.cs">
+    <Compile Include="EmailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Email.Designer.cs">
-      <DependentUpon>Email.cs</DependentUpon>
+    <Compile Include="EmailForm.Designer.cs">
+      <DependentUpon>EmailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="AddBillForm.resx">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Email.resx">
-      <DependentUpon>Email.cs</DependentUpon>
+    <EmbeddedResource Include="EmailForm.resx">
+      <DependentUpon>EmailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

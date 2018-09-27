@@ -1,6 +1,6 @@
 ﻿namespace BillTracking
 {
-    partial class Email
+    partial class EmailForm
     {
         /// <summary>
         /// Required designer variable.

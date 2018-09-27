@@ -14,6 +14,7 @@ namespace BillTracking
     {
         public BindingList<Bill> BillMasterList = new BindingList<Bill>();
         BillForm BillForm;
+        EmailForm EmailForm;
 
         public HomePage()
         {
@@ -49,6 +50,11 @@ namespace BillTracking
         private void ManageBillForm_BillCreated(object sender, Bill e)
         {
             BillMasterList.Add(e);
+        }
+
+        private void referLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            EmailForm.Show();
         }
     }
 }
