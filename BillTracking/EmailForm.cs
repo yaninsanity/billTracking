@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Net.Mail;
 
 namespace BillTracking
 {
@@ -41,6 +42,20 @@ namespace BillTracking
         private void emailTextbox_Click(object sender, EventArgs e)
         {
             emailTextbox.Clear();
+        }
+
+        public void SendEmailMessage()
+        {
+            try
+            { 
+            MailMessage mail = new MailMessage();
+            SmtpClient client = new SmtpClient();
+            client.Port = 25;
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.UseDefaultCredentials = false;
+                client.Host 
+            }
+            
         }
     }
 }
