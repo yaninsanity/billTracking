@@ -88,8 +88,21 @@ namespace BillTracking
 
         private void archiveButton_Click(object sender, EventArgs e)
         {
-            ArchivesForm objArchivePage = new ArchivesForm();
-            objArchivePage.Show();
+            if (billListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select the item to delete", "Failed");
+            }
+
+            else
+
+            {
+                Bill tmpArchiveBill = (Bill)billListBox.SelectedItem;
+                
+                ArchivesForm objArchivePage = new ArchivesForm(tmpArchiveBill);
+                objArchivePage.Show();
+            }
+            
+            
         }
     }
 }

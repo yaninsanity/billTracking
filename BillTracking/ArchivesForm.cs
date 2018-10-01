@@ -12,9 +12,21 @@ namespace BillTracking
 {
     public partial class ArchivesForm : Form
     {
+        BindingList<Bill> archivesBillList = new BindingList<Bill>();
         public ArchivesForm()
         {
             InitializeComponent();
         }
+
+        public ArchivesForm(Bill tmpArchiveBill)
+        {
+            archivesBillList.Add(tmpArchiveBill);
+                      
+            InitializeComponent();
+            archivesListBox.DataSource = archivesBillList;
+            archivesListBox.Refresh();
+        }
+
+
     }
 }
