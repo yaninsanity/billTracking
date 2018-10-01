@@ -35,7 +35,8 @@
             this.updateButton = new System.Windows.Forms.Button();
             this.yourAccountLabel = new System.Windows.Forms.Label();
             this.homeLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.archiveButton = new System.Windows.Forms.Button();
+            this.viewArchivesLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // logoutLinkLabel
@@ -76,10 +77,10 @@
             // billListBox
             // 
             this.billListBox.FormattingEnabled = true;
-            this.billListBox.ItemHeight = 15;
+            this.billListBox.ItemHeight = 29;
             this.billListBox.Location = new System.Drawing.Point(46, 236);
             this.billListBox.Name = "billListBox";
-            this.billListBox.Size = new System.Drawing.Size(682, 379);
+            this.billListBox.Size = new System.Drawing.Size(682, 352);
             this.billListBox.TabIndex = 4;
             // 
             // updateButton
@@ -101,7 +102,7 @@
             this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
             this.yourAccountLabel.Name = "yourAccountLabel";
-            this.yourAccountLabel.Size = new System.Drawing.Size(95, 40);
+            this.yourAccountLabel.Size = new System.Drawing.Size(181, 78);
             this.yourAccountLabel.TabIndex = 5;
             this.yourAccountLabel.Text = "Bills";
             // 
@@ -111,31 +112,44 @@
             this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLinkLabel.Location = new System.Drawing.Point(660, 9);
             this.homeLinkLabel.Name = "homeLinkLabel";
-            this.homeLinkLabel.Size = new System.Drawing.Size(56, 20);
+            this.homeLinkLabel.Size = new System.Drawing.Size(106, 37);
             this.homeLinkLabel.TabIndex = 6;
             this.homeLinkLabel.TabStop = true;
             this.homeLinkLabel.Text = "Home";
             this.homeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.homeLinkLabel_LinkClicked);
             // 
-            // button1
+            // archiveButton
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(398, 139);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 74);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "ARCHIVE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.archiveButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.archiveButton.ForeColor = System.Drawing.Color.White;
+            this.archiveButton.Location = new System.Drawing.Point(398, 139);
+            this.archiveButton.Margin = new System.Windows.Forms.Padding(4);
+            this.archiveButton.Name = "archiveButton";
+            this.archiveButton.Size = new System.Drawing.Size(150, 74);
+            this.archiveButton.TabIndex = 8;
+            this.archiveButton.Text = "ARCHIVE";
+            this.archiveButton.UseVisualStyleBackColor = false;
+            this.archiveButton.Click += new System.EventHandler(this.archiveButton_Click);
+            // 
+            // viewArchivesLinkLabel
+            // 
+            this.viewArchivesLinkLabel.AutoSize = true;
+            this.viewArchivesLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewArchivesLinkLabel.Location = new System.Drawing.Point(572, 611);
+            this.viewArchivesLinkLabel.Name = "viewArchivesLinkLabel";
+            this.viewArchivesLinkLabel.Size = new System.Drawing.Size(305, 37);
+            this.viewArchivesLinkLabel.TabIndex = 9;
+            this.viewArchivesLinkLabel.TabStop = true;
+            this.viewArchivesLinkLabel.Text = "View Archived Bills";
             // 
             // BillForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(789, 676);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.viewArchivesLinkLabel);
+            this.Controls.Add(this.archiveButton);
             this.Controls.Add(this.homeLinkLabel);
             this.Controls.Add(this.yourAccountLabel);
             this.Controls.Add(this.updateButton);
@@ -163,6 +177,7 @@
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label yourAccountLabel;
         private System.Windows.Forms.LinkLabel homeLinkLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button archiveButton;
+        private System.Windows.Forms.LinkLabel viewArchivesLinkLabel;
     }
 }

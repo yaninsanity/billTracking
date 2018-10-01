@@ -52,6 +52,12 @@
     <Compile Include="AddBillForm.Designer.cs">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArchivesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchivesForm.Designer.cs">
+      <DependentUpon>ArchivesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillClass.cs" />
     <Compile Include="EmailForm.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="AddBillForm.resx">
       <DependentUpon>AddBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchivesForm.resx">
+      <DependentUpon>ArchivesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmailForm.resx">
       <DependentUpon>EmailForm.cs</DependentUpon>
