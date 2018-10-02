@@ -19,6 +19,8 @@ namespace BillTracking
         AddBillForm addBillForm;
         UpdateBillForm updateBillForm;
 
+        Bill tmpBill;
+
         public BillForm(BindingList<Bill> e)
         {
             InitializeComponent();
@@ -52,14 +54,27 @@ namespace BillTracking
 
         private void SetEventHandlers_Load(object sender, EventArgs e)
         {
-            addBillForm = new AddBillForm();
-            addBillForm.NewBillCreated += new BillDelegate(this.AddBillForm_BillCreated);
+            addBillForm = new AddBillForm();            
+            addBillForm.NewBillCreated += new BillDelegate(this.AddBillForm_BillCreated);            
         }
 
         private void AddBillForm_BillCreated(object sender, Bill e)
         {
             myBillList.Add(e);
             billListBox.Refresh();
+        }
+
+        private void UpdateBillForm_BillUpdated(object sender, Bill e)
+        {
+            tmpBill = e;
+            foreach(Bill tmpBill in myBillList)
+            {
+                if (tmpBill == e)
+                {
+                    myBillList.Remove((Bill)billListBox.SelectedItem);
+                    return;
+                }                  
+            }   
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -71,6 +86,8 @@ namespace BillTracking
             {
                 updateBillForm = new UpdateBillForm((Bill)billListBox.SelectedItem);
                 updateBillForm.Show();
+                updateBillForm.BillUpdated += new BillDelegate(this.UpdateBillForm_BillUpdated);
+                updateBillForm.NewBillCreated += new BillDelegate(this.AddBillForm_BillCreated);
             }            
             
         }

@@ -13,8 +13,11 @@ namespace BillTracking
     public partial class UpdateBillForm : Form
     {
         public event BillDelegate BillUpdated;
+        public event BillDelegate NewBillCreated;
 
-        double Amount;
+        Bill tmpItem;
+
+        Double Amount;
 
         public UpdateBillForm(object selectedItem)
         {
@@ -22,7 +25,7 @@ namespace BillTracking
 
             if (selectedItem is Bill)
             {
-                Bill tmpItem = (Bill)selectedItem;
+                tmpItem = (Bill)selectedItem;
                 NameTextBox.Text = tmpItem.Name;
                 BillDateTime.Text = tmpItem.Date;
                 AmountTextBox.Text = tmpItem.Amount.ToString();
@@ -34,21 +37,24 @@ namespace BillTracking
         {
             try
             {
-              double  Amount = Convert.ToDouble(AmountTextBox.Text);
+              Amount = Convert.ToDouble(AmountTextBox.Text);
             }
             catch (Exception)
             {
                 MessageBox.Show("Please enter only numbers & decimals into the Amount Textbox","Failed");
                 return;
-            }
+            }            
 
             Bill tmpBill = new Bill(NameTextBox.Text, BillDateTime.Text, Amount, recurrenceComboBox.Text);
 
             if (BillUpdated != null)
-                BillUpdated(this, tmpBill);
+                BillUpdated(this, tmpItem);
+
+            if (NewBillCreated != null)
+                NewBillCreated(this, tmpBill);
 
             //Message Box to tell an account was created succesfully
-            MessageBox.Show("Bill Created Successfully");
+            MessageBox.Show("Bill Updated Successfully");
 
             NameTextBox.Text = null;
             BillDateTime.Text = null;
@@ -60,7 +66,7 @@ namespace BillTracking
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }
