@@ -47,8 +47,7 @@ namespace BillTracking
         }
 
         public void SendEmailMessage()
-        {
-           
+        {           
              String officialEmail = "devilsdeveloperonline@gmail.com";
              String officialPassword = "Devils123";
 
