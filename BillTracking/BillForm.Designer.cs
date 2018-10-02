@@ -141,6 +141,7 @@
             this.viewArchivesLinkLabel.TabIndex = 9;
             this.viewArchivesLinkLabel.TabStop = true;
             this.viewArchivesLinkLabel.Text = "View Archived Bills";
+            this.viewArchivesLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.viewArchivesLinkLabel_LinkClicked);
             // 
             // BillForm
             // 

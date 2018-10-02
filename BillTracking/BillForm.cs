@@ -90,7 +90,7 @@ namespace BillTracking
         {
             if (billListBox.SelectedItem == null)
             {
-                MessageBox.Show("Please select the item to delete", "Failed");
+                MessageBox.Show("Please select the item to archive", "Failed");
             }
 
             else
@@ -100,9 +100,18 @@ namespace BillTracking
                 
                 ArchivesForm objArchivePage = new ArchivesForm(tmpArchiveBill);
                 objArchivePage.Show();
+
+                myBillList.Remove(tmpArchiveBill);
             }
             
             
+        }
+
+        private void viewArchivesLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ArchivesForm objArchiveForm = new ArchivesForm();
+            objArchiveForm.Show();
+            this.Hide();
         }
     }
 }
