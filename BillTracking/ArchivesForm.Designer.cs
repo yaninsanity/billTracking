@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.archivesListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.restoreButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,17 +53,18 @@
             this.archivesListBox.Size = new System.Drawing.Size(766, 323);
             this.archivesListBox.TabIndex = 1;
             // 
-            // button1
+            // restoreButton
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(628, 521);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 74);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "RESTORE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.restoreButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.restoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restoreButton.ForeColor = System.Drawing.Color.White;
+            this.restoreButton.Location = new System.Drawing.Point(628, 521);
+            this.restoreButton.Name = "restoreButton";
+            this.restoreButton.Size = new System.Drawing.Size(176, 74);
+            this.restoreButton.TabIndex = 2;
+            this.restoreButton.Text = "RESTORE";
+            this.restoreButton.UseVisualStyleBackColor = false;
+            this.restoreButton.Click += new System.EventHandler(this.restoreButton_Click);
             // 
             // ArchivesForm
             // 
@@ -71,7 +72,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(868, 634);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.restoreButton);
             this.Controls.Add(this.archivesListBox);
             this.Controls.Add(this.label1);
             this.Name = "ArchivesForm";
@@ -85,6 +86,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox archivesListBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button restoreButton;
     }
 }

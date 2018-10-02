@@ -25,7 +25,16 @@ namespace BillTracking
             myBillList = e;
             billListBox.DataSource = e;
         }
-        
+
+        public BillForm(Bill tmpBill)
+        {
+            myBillList.Add(tmpBill);
+
+            InitializeComponent();
+            billListBox.DataSource = myBillList;
+            billListBox.Refresh();
+        }
+
         private void logoutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
@@ -102,6 +111,7 @@ namespace BillTracking
                 objArchivePage.Show();
 
                 myBillList.Remove(tmpArchiveBill);
+                this.Hide();
             }
             
             
@@ -109,7 +119,9 @@ namespace BillTracking
 
         private void viewArchivesLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ArchivesForm objArchiveForm = new ArchivesForm();
+            Bill tmpArchiveBill = (Bill)billListBox.SelectedItem;
+
+            ArchivesForm objArchiveForm = new ArchivesForm(tmpArchiveBill);
             objArchiveForm.Show();
             this.Hide();
         }
