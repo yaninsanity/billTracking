@@ -13,6 +13,7 @@ namespace BillTracking
     public partial class ArchivesForm : Form
     {
         BindingList<Bill> myArchivesBillList = new BindingList<Bill>();
+        public event BillDelegate TransferBill;
 
         public ArchivesForm(BindingList<Bill> e)
         {
@@ -42,13 +43,17 @@ namespace BillTracking
             {
                 Bill tmpBill = (Bill)archivesListBox.SelectedItem;
 
-                BillForm objBillPage = new BillForm(tmpBill);
-                objBillPage.Show();
-
+                if (TransferBill != null)
+                    TransferBill(this, tmpBill);
 
                 myArchivesBillList.Remove(tmpBill);
-                this.Hide();
+                this.Close();
             }
+        }
+
+        private void homeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

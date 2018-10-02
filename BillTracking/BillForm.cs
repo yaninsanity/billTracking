@@ -16,6 +16,7 @@ namespace BillTracking
     {
         //Public event for the creation of an bill
         BindingList<Bill>myBillList = new BindingList<Bill>();
+        BindingList<Bill> archiveList = new BindingList<Bill>();
         AddBillForm addBillForm;
         UpdateBillForm updateBillForm;
 
@@ -120,15 +121,14 @@ namespace BillTracking
             }
 
             else
-
             {
                 Bill tmpArchiveBill = (Bill)billListBox.SelectedItem;
-                
-                ArchivesForm objArchivePage = new ArchivesForm(tmpArchiveBill);
-                objArchivePage.Show();
+                archiveList.Add(tmpArchiveBill);
+                ArchivesForm objArchivePage = new ArchivesForm(archiveList);
+                objArchivePage.TransferBill += new BillDelegate(this.AddBillForm_BillCreated);
 
                 myBillList.Remove(tmpArchiveBill);
-                this.Hide();
+                billListBox.Refresh();
             }
             
             
@@ -136,11 +136,9 @@ namespace BillTracking
 
         private void viewArchivesLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Bill tmpArchiveBill = (Bill)billListBox.SelectedItem;
-
-            ArchivesForm objArchiveForm = new ArchivesForm(tmpArchiveBill);
-            objArchiveForm.Show();
-            this.Hide();
+            ArchivesForm objArchivePage = new ArchivesForm(archiveList);
+            objArchivePage.TransferBill += new BillDelegate(this.AddBillForm_BillCreated);
+            objArchivePage.Show();
         }
     }
 }
