@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BillTracking
 {
+    [Serializable]
     public partial class Bill
     {
         string name;

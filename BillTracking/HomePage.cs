@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace BillTracking
 {
@@ -26,6 +28,12 @@ namespace BillTracking
             if (result == DialogResult.Yes)
             {
                 //This is where saving needs to be implemented.
+                FileStream file = new FileStream("data.dat", FileMode.Create, FileAccess.Write);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(file, BillMasterList);
+                file.Close();
+
+                //Open back the loggin form
                 LoginForm LoginForm = new LoginForm();
                 LoginForm.Show();
                 this.Close();
@@ -43,6 +51,13 @@ namespace BillTracking
 
         private void SetEventHandlers_Load(object sender, EventArgs e)
         {
+            //load from dat file
+            FileStream file = new FileStream("data.dat", FileMode.Open, FileAccess.Read);
+            BinaryFormatter bf = new BinaryFormatter();
+            BillMasterList = (BindingList<Bill>)bf.Deserialize(file);
+            file.Close();
+
+
             BillForm = new BillForm(BillMasterList);
         }
 
