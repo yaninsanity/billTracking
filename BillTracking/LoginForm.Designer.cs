@@ -87,6 +87,7 @@
             this.pinTextBox.Name = "pinTextBox";
             this.pinTextBox.Size = new System.Drawing.Size(398, 59);
             this.pinTextBox.TabIndex = 4;
+            this.pinTextBox.TextChanged += new System.EventHandler(this.pinTextBox_TextChanged);
             // 
             // loginButton
             // 

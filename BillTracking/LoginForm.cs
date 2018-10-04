@@ -37,5 +37,9 @@ namespace BillTracking
             this.Hide();
         }
 
+        private void pinTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

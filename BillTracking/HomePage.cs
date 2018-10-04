@@ -71,5 +71,12 @@ namespace BillTracking
             EmailForm EmailForms = new EmailForm();
             EmailForms.Show();
         }
+
+        private void accountMgtLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AccountManagementForm actMgtForm = new AccountManagementForm();
+            actMgtForm.Show();
+            this.Close();
+        }
     }
 }

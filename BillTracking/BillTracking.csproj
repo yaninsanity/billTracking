@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="AccountManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountManagementForm.Designer.cs">
+      <DependentUpon>AccountManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddBillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="UpdateBillForm.Designer.cs">
       <DependentUpon>UpdateBillForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountManagementForm.resx">
+      <DependentUpon>AccountManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddBillForm.resx">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </EmbeddedResource>
