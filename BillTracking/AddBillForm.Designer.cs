@@ -113,10 +113,13 @@
             // 
             // BillDateTime
             // 
+            this.BillDateTime.Checked = false;
+            this.BillDateTime.CustomFormat = "";
             this.BillDateTime.Location = new System.Drawing.Point(117, 120);
             this.BillDateTime.Name = "BillDateTime";
             this.BillDateTime.Size = new System.Drawing.Size(200, 20);
             this.BillDateTime.TabIndex = 12;
+            this.BillDateTime.ValueChanged += new System.EventHandler(this.BillDateTime_ValueChanged);
             // 
             // AmountLabel
             // 

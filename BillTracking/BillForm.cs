@@ -141,5 +141,10 @@ namespace BillTracking
             objArchivePage.TransferBill += new BillDelegate(this.AddBillForm_BillCreated);
             objArchivePage.Show();
         }
+
+        private void billListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

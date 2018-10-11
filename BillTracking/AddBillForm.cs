@@ -29,6 +29,7 @@ namespace BillTracking
 
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 Amount = Convert.ToDouble(AmountTextBox.Text);
@@ -51,9 +52,14 @@ namespace BillTracking
             BillDateTime.Text = null;
             AmountTextBox.Text = null;
             recurrenceComboBox.Text = null;
-
+            
             this.Hide();
     
+        }
+
+        private void BillDateTime_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

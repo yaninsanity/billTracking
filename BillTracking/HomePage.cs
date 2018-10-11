@@ -78,5 +78,12 @@ namespace BillTracking
             actMgtForm.Show();
             this.Close();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Reminder myReminderForm = new Reminder();
+
+            
+        }
     }
 }
