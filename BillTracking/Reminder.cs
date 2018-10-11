@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,7 @@ namespace BillTracking
         BindingList<Bill> myList = new BindingList<Bill>();
         List<Bill> reminderList = new List<Bill>();
         String reminder = "";
+        String myEmail;
         public Reminder()
         {
             InitializeComponent();
@@ -27,7 +30,7 @@ namespace BillTracking
             //pass value into global varible
             myList = billList;
             FindDueDate();
-
+            myEmail = email;
 
 
         }
@@ -66,7 +69,46 @@ namespace BillTracking
                 }
                 reminder += ".";
             }
+            reminderTextBox.Text = reminder;
 
+        }
+
+
+        public void sendEmail()
+        {
+            String officialEmail = "devilsdeveloperonline@gmail.com";
+            String officialPassword = "Devils123";
+
+            MailMessage mail = new MailMessage();
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.EnableSsl = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+            client.Credentials = new NetworkCredential(officialEmail, officialPassword);
+            MailMessage messageObj = new MailMessage();
+            messageObj.From = new MailAddress(officialEmail, "Devil's Developers Team");
+            messageObj.Subject = "Your Today's Reminder from Devil's Develpers Team";
+            messageObj.To.Add(myEmail);
+            messageObj.Priority = MailPriority.High;
+            messageObj.IsBodyHtml = true;
+            messageObj.Body = $"<html><header>Your Latest Reminder</header><body> {reminder} </body></html> <br><br><p>Devils' Developers Team</p> ";
+            try
+            {
+                client.Send(messageObj);
+
+                MessageBox.Show("Message has been sent successfully");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+                MessageBox.Show("Please fix the problem and resend it", "Error");
+            }
+        }
+
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            sendEmail();
         }
     }
 }

@@ -35,16 +35,17 @@
             // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(68, 360);
+            this.sendButton.Location = new System.Drawing.Point(64, 338);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(206, 38);
             this.sendButton.TabIndex = 0;
             this.sendButton.Text = "Send To My Email";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // reminderTextBox
             // 
-            this.reminderTextBox.Location = new System.Drawing.Point(68, 105);
+            this.reminderTextBox.Location = new System.Drawing.Point(64, 105);
             this.reminderTextBox.Multiline = true;
             this.reminderTextBox.Name = "reminderTextBox";
             this.reminderTextBox.Size = new System.Drawing.Size(206, 202);
@@ -54,7 +55,7 @@
             // 
             this.reminderLabel.AutoSize = true;
             this.reminderLabel.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reminderLabel.Location = new System.Drawing.Point(79, 59);
+            this.reminderLabel.Location = new System.Drawing.Point(96, 25);
             this.reminderLabel.Name = "reminderLabel";
             this.reminderLabel.Size = new System.Drawing.Size(143, 43);
             this.reminderLabel.TabIndex = 2;
@@ -64,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 488);
+            this.ClientSize = new System.Drawing.Size(324, 429);
             this.Controls.Add(this.reminderLabel);
             this.Controls.Add(this.reminderTextBox);
             this.Controls.Add(this.sendButton);
