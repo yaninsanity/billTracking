@@ -19,6 +19,9 @@ namespace BillTracking
         //List to contain the created account
         public List<Account> accountList = new List<Account>();
 
+        //List to contain personal bills
+        public BindingList<Bill> BillMasterList = new BindingList<Bill>();
+
 
         public SignUpForm()
         {   
@@ -103,10 +106,16 @@ namespace BillTracking
             MessageBox.Show("Account Created Successfully");
 
             //Save the accounts into a data file
-            FileStream file = new FileStream("myAccounts.dat", FileMode.Create, FileAccess.Write);
+            FileStream file = new FileStream("userAccounts.dat", FileMode.Create, FileAccess.Write);
             BinaryFormatter bf = new BinaryFormatter();
             bf.Serialize(file, accountList);
             file.Close();
+
+            //Save the account individual bill
+            FileStream userFile = new FileStream(usernameTextBox.Text, FileMode.Create, FileAccess.Write);
+            BinaryFormatter userBF = new BinaryFormatter();
+            userBF.Serialize(userFile, BillMasterList);
+            userFile.Close();
 
             //Clear out all the fields for next account
             usernameTextBox.Clear();
