@@ -16,7 +16,7 @@ namespace BillTracking
         {
             InitializeComponent();
 
-            pinTextBox.PasswordChar = '*';
+            pinTextBox.PasswordChar = '*';                        
         }
 
         private void homeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
