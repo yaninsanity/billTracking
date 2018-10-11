@@ -81,7 +81,7 @@ namespace BillTracking
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Reminder myReminderForm = new Reminder();
+            Reminder myReminderForm = new Reminder(email,BillMasterList);
 
             
         }
