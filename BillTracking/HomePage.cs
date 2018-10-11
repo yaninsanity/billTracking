@@ -18,6 +18,7 @@ namespace BillTracking
         BillForm BillForm;
         string accountName;
         bool success = true;
+        string email;
 
 
         public HomePage()
@@ -25,10 +26,11 @@ namespace BillTracking
             InitializeComponent();
         }
 
-        public HomePage(string userName)
+        public HomePage(string userName,string tmpEmail)
         {
             InitializeComponent();
             accountName = userName;
+            email = tmpEmail;
         }
 
         private void logoutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -91,8 +93,8 @@ namespace BillTracking
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Reminder myReminderForm = new Reminder(email,BillMasterList);
-
+            Reminder myReminderForm = new Reminder(email,BillMasterList);
+            myReminderForm.Show();
             
         }
     }

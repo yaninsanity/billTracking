@@ -35,22 +35,62 @@ namespace BillTracking
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            List<Account> accList;
             string userName = usernameTextBox.Text;
+            
+            string userEmail="";
+            string pin = "";
             try
             {
-                FileStream file = new FileStream(userName, FileMode.Open, FileAccess.Read);
+                FileStream file = new FileStream("userAccounts.dat", FileMode.Open, FileAccess.Read);
                 BinaryFormatter bf = new BinaryFormatter();
+                accList = (List<Account>)bf.Deserialize(file);
                 file.Close();
             }
-            catch (Exception)
+            catch (Exception  tmpE)
             {
                 MessageBox.Show("Error Occured, Please check username");
+                MessageBox.Show(tmpE.Message);
                 return;
             }
 
-            HomePage objHomePage = new HomePage(userName);
-            objHomePage.Show();
-            this.Hide();
+           
+            foreach (Account acc in accList)
+            {
+                if (acc.Username == usernameTextBox.Text)
+                {
+                    pin = acc.Pin;
+                    userEmail = acc.Email;
+                }
+            }
+
+            if (pinTextBox.Text != pin)
+            {
+                MessageBox.Show("Wrong Password,Please retry your password");
+
+            }
+            else
+            {
+                try
+                {
+                    FileStream file = new FileStream(userName, FileMode.Open, FileAccess.Read);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    
+                    file.Close();
+                }
+                catch (Exception tmpE)
+                {
+                    MessageBox.Show("Error Occured, Please check username");
+                    MessageBox.Show(tmpE.Message);
+                    return;
+                }
+
+
+                HomePage objHomePage = new HomePage(userName, userEmail);
+                objHomePage.Show();
+                this.Hide();
+            }
+           
         }
 
         private void pinTextBox_TextChanged(object sender, EventArgs e)
@@ -59,3 +99,6 @@ namespace BillTracking
         }
     }
 }
+
+
+      

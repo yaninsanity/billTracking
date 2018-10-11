@@ -41,7 +41,7 @@ namespace BillTracking
 
             foreach (Bill b in myList)
             {
-                //The date format is "10/10/2018" using substring to slice the string.
+                //The date format is "Thursday, October 11, 2018" using substring to slice the string.
                 double billDay = double.Parse(b.Date.Substring(2, 2));
                 double dayDiff=Math.Abs(billDay - todayDay);
 
@@ -55,7 +55,7 @@ namespace BillTracking
             }
 
             //no bill is coming up
-            if (reminderList == null)
+            if (reminderList.Count() == 0)
             {
                 reminder = "There are no coming up bills in these 3 days.";
             }
