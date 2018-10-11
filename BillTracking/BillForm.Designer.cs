@@ -77,11 +77,12 @@
             // billListBox
             // 
             this.billListBox.FormattingEnabled = true;
-            this.billListBox.ItemHeight = 29;
+            this.billListBox.ItemHeight = 15;
             this.billListBox.Location = new System.Drawing.Point(46, 236);
             this.billListBox.Name = "billListBox";
-            this.billListBox.Size = new System.Drawing.Size(682, 352);
+            this.billListBox.Size = new System.Drawing.Size(682, 349);
             this.billListBox.TabIndex = 4;
+            this.billListBox.SelectedIndexChanged += new System.EventHandler(this.billListBox_SelectedIndexChanged);
             // 
             // updateButton
             // 
@@ -102,7 +103,7 @@
             this.yourAccountLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourAccountLabel.Location = new System.Drawing.Point(33, 47);
             this.yourAccountLabel.Name = "yourAccountLabel";
-            this.yourAccountLabel.Size = new System.Drawing.Size(181, 78);
+            this.yourAccountLabel.Size = new System.Drawing.Size(95, 40);
             this.yourAccountLabel.TabIndex = 5;
             this.yourAccountLabel.Text = "Bills";
             // 
@@ -112,7 +113,7 @@
             this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLinkLabel.Location = new System.Drawing.Point(660, 9);
             this.homeLinkLabel.Name = "homeLinkLabel";
-            this.homeLinkLabel.Size = new System.Drawing.Size(106, 37);
+            this.homeLinkLabel.Size = new System.Drawing.Size(56, 20);
             this.homeLinkLabel.TabIndex = 6;
             this.homeLinkLabel.TabStop = true;
             this.homeLinkLabel.Text = "Home";
@@ -137,7 +138,7 @@
             this.viewArchivesLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewArchivesLinkLabel.Location = new System.Drawing.Point(572, 611);
             this.viewArchivesLinkLabel.Name = "viewArchivesLinkLabel";
-            this.viewArchivesLinkLabel.Size = new System.Drawing.Size(305, 37);
+            this.viewArchivesLinkLabel.Size = new System.Drawing.Size(159, 20);
             this.viewArchivesLinkLabel.TabIndex = 9;
             this.viewArchivesLinkLabel.TabStop = true;
             this.viewArchivesLinkLabel.Text = "View Archived Bills";
@@ -145,7 +146,7 @@
             // 
             // BillForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(789, 676);
