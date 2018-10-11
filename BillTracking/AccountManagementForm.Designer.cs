@@ -36,9 +36,9 @@
             this.incomeLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.pinTextBox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.monthlyIncomeTextbox = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
             this.homeLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -117,38 +117,39 @@
             this.pinTextBox.Size = new System.Drawing.Size(201, 33);
             this.pinTextBox.TabIndex = 6;
             // 
-            // textBox3
+            // emailTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox3.Location = new System.Drawing.Point(178, 198);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 33);
-            this.textBox3.TabIndex = 7;
+            this.emailTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.emailTextBox.Location = new System.Drawing.Point(178, 198);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTextBox.Multiline = true;
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(201, 33);
+            this.emailTextBox.TabIndex = 7;
             // 
-            // textBox4
+            // monthlyIncomeTextbox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox4.Location = new System.Drawing.Point(178, 254);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(201, 33);
-            this.textBox4.TabIndex = 8;
+            this.monthlyIncomeTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.monthlyIncomeTextbox.Location = new System.Drawing.Point(178, 254);
+            this.monthlyIncomeTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.monthlyIncomeTextbox.Multiline = true;
+            this.monthlyIncomeTextbox.Name = "monthlyIncomeTextbox";
+            this.monthlyIncomeTextbox.Size = new System.Drawing.Size(201, 33);
+            this.monthlyIncomeTextbox.TabIndex = 8;
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(270, 300);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 37);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.saveButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.Location = new System.Drawing.Point(270, 300);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(108, 37);
+            this.saveButton.TabIndex = 9;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // homeLinkLabel
             // 
@@ -170,9 +171,9 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(425, 352);
             this.Controls.Add(this.homeLinkLabel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.monthlyIncomeTextbox);
+            this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.pinTextBox);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.incomeLabel);
@@ -198,9 +199,9 @@
         private System.Windows.Forms.Label incomeLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox pinTextBox;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox monthlyIncomeTextbox;
+        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.LinkLabel homeLinkLabel;
     }
 }

@@ -37,7 +37,7 @@ namespace BillTracking
         {
             List<Account> accList;
             string userName = usernameTextBox.Text;
-            
+            double monthlyIncome = 0;
             string userEmail="";
             string pin = "";
             try
@@ -61,6 +61,7 @@ namespace BillTracking
                 {
                     pin = acc.Pin;
                     userEmail = acc.Email;
+                    monthlyIncome = acc.MonthlyIncome;
                 }
             }
 
@@ -86,7 +87,7 @@ namespace BillTracking
                 }
 
 
-                HomePage objHomePage = new HomePage(userName, userEmail);
+                HomePage objHomePage = new HomePage(userName, userEmail,pin,monthlyIncome);
                 objHomePage.Show();
                 this.Hide();
             }

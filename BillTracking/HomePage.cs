@@ -19,18 +19,21 @@ namespace BillTracking
         string accountName;
         bool success = true;
         string email;
-
+        double monthlyIncome;
+        string pin;
 
         public HomePage()
         {
             InitializeComponent();
         }
 
-        public HomePage(string userName,string tmpEmail)
+        public HomePage(string userName,string tmpEmail,string pin, double monthlyIncome)
         {
             InitializeComponent();
             accountName = userName;
             email = tmpEmail;
+            this.pin = pin;
+            this.monthlyIncome = monthlyIncome;
         }
 
         private void logoutLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -86,7 +89,8 @@ namespace BillTracking
 
         private void accountMgtLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AccountManagementForm actMgtForm = new AccountManagementForm();
+            Account tmpAccount = new Account(accountName, pin, email, monthlyIncome);
+            AccountManagementForm actMgtForm = new AccountManagementForm(tmpAccount);
             actMgtForm.Show();
             //this.Close();
         }
