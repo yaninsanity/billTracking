@@ -18,5 +18,10 @@ namespace BillTracking
 
             pinTextBox.PasswordChar = '*';
         }
+
+        private void homeLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

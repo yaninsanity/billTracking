@@ -86,12 +86,12 @@ namespace BillTracking
         {
             AccountManagementForm actMgtForm = new AccountManagementForm();
             actMgtForm.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Reminder myReminderForm = new Reminder(email,BillMasterList);
+            //Reminder myReminderForm = new Reminder(email,BillMasterList);
 
             
         }

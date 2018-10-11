@@ -38,6 +38,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.homeLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // actMgtLabel
@@ -138,12 +139,25 @@
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // homeLinkLabel
+            // 
+            this.homeLinkLabel.AutoSize = true;
+            this.homeLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.homeLinkLabel.Location = new System.Drawing.Point(677, 13);
+            this.homeLinkLabel.Name = "homeLinkLabel";
+            this.homeLinkLabel.Size = new System.Drawing.Size(106, 37);
+            this.homeLinkLabel.TabIndex = 10;
+            this.homeLinkLabel.TabStop = true;
+            this.homeLinkLabel.Text = "Home";
+            this.homeLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.homeLinkLabel_LinkClicked);
+            // 
             // AccountManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(850, 676);
+            this.Controls.Add(this.homeLinkLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -173,5 +187,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel homeLinkLabel;
     }
 }
