@@ -41,6 +41,7 @@ namespace BillTracking
 
             foreach (Bill b in myList)
             {
+                //The date format is "10/10/2018" using substring to slice the string.
                 double billDay = double.Parse(b.Date.Substring(2, 2));
                 double dayDiff=Math.Abs(billDay - todayDay);
 
@@ -53,16 +54,16 @@ namespace BillTracking
               
             }
 
-
+            //no bill is coming up
             if (reminderList == null)
             {
-                reminder = "There are no coming up bills.";
+                reminder = "There are no coming up bills in these 3 days.";
             }
 
             else
 
             {
-                reminder = $"There are {reminderList.Count()} bills coming up. Please check track these bills: ";
+                reminder = $"There are {reminderList.Count()} bills coming up. Please track these bills: ";
                 foreach (Bill b in myList)
                 {
                     reminder += b.Name + ", ";
@@ -73,7 +74,7 @@ namespace BillTracking
 
         }
 
-
+        //send email to user email Address
         public void sendEmail()
         {
             String officialEmail = "devilsdeveloperonline@gmail.com";
