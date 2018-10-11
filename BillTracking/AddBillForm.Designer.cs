@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBillForm));
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.namelabel = new System.Windows.Forms.Label();
@@ -164,6 +165,7 @@
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.ConfirmButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddBillForm";
             this.Text = "Add A Bill!";
             this.ResumeLayout(false);

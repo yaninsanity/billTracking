@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reminder));
             this.sendButton = new System.Windows.Forms.Button();
             this.reminderTextBox = new System.Windows.Forms.TextBox();
             this.reminderLabel = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.reminderTextBox.Location = new System.Drawing.Point(64, 105);
             this.reminderTextBox.Multiline = true;
             this.reminderTextBox.Name = "reminderTextBox";
+            this.reminderTextBox.ReadOnly = true;
             this.reminderTextBox.Size = new System.Drawing.Size(206, 202);
             this.reminderTextBox.TabIndex = 1;
             // 
@@ -69,6 +71,8 @@
             this.Controls.Add(this.reminderLabel);
             this.Controls.Add(this.reminderTextBox);
             this.Controls.Add(this.sendButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Reminder";
             this.Text = "Reminder";
             this.ResumeLayout(false);

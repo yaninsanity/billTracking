@@ -38,11 +38,25 @@ namespace BillTracking
         public void FindDueDate()
         {
             double todayDay = DateTime.Today.Day;
-
+            double billDay;
             foreach (Bill b in myList)
             {
+                int loopTime=0 ;
                 //The date format is "Thursday, October 11, 2018" using substring to slice the string.
-                double billDay = double.Parse(b.Date.Substring(2, 2));
+                foreach (Char e in b.Date)
+                {
+                    int counter = 0;
+                    if (e == ',' && counter != 1)
+                    {
+                        counter++;
+                        
+                    }
+                    loopTime++;
+
+                }
+
+                 billDay = double.Parse(b.Date.Substring(loopTime-3, 2));
+
                 double dayDiff=Math.Abs(billDay - todayDay);
 
                 if (dayDiff <= 3)

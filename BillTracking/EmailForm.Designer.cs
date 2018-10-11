@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmailForm));
             this.emailLabel = new System.Windows.Forms.Label();
             this.sendButton = new System.Windows.Forms.Button();
             this.emailTextbox = new System.Windows.Forms.TextBox();
@@ -91,6 +92,7 @@
             this.Controls.Add(this.emailTextbox);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.emailLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "EmailForm";
             this.Text = "Email";

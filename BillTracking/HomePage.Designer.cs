@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.logoutLinkLabel = new System.Windows.Forms.LinkLabel();
             this.questionLabel = new System.Windows.Forms.Label();
@@ -137,7 +138,8 @@
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.logoutLinkLabel);
             this.Controls.Add(this.welcomeLabel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomePage";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.SetEventHandlers_Load);

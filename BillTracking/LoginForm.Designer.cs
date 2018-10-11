@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.loginLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
@@ -44,28 +45,31 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Eras Bold ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(178, 40);
+            this.loginLabel.Location = new System.Drawing.Point(89, 21);
+            this.loginLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(231, 78);
+            this.loginLabel.Size = new System.Drawing.Size(120, 40);
             this.loginLabel.TabIndex = 0;
             this.loginLabel.Text = "Login";
             // 
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(87, 195);
+            this.usernameTextBox.Location = new System.Drawing.Point(44, 101);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Multiline = true;
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(398, 60);
+            this.usernameTextBox.Size = new System.Drawing.Size(201, 33);
             this.usernameTextBox.TabIndex = 1;
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(80, 150);
+            this.usernameLabel.Location = new System.Drawing.Point(40, 78);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(181, 42);
+            this.usernameLabel.Size = new System.Drawing.Size(90, 22);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username";
             // 
@@ -73,19 +77,21 @@
             // 
             this.pinLabel.AutoSize = true;
             this.pinLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinLabel.Location = new System.Drawing.Point(80, 302);
+            this.pinLabel.Location = new System.Drawing.Point(40, 157);
+            this.pinLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pinLabel.Name = "pinLabel";
-            this.pinLabel.Size = new System.Drawing.Size(69, 42);
+            this.pinLabel.Size = new System.Drawing.Size(36, 22);
             this.pinLabel.TabIndex = 3;
             this.pinLabel.Text = "Pin";
             // 
             // pinTextBox
             // 
             this.pinTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pinTextBox.Location = new System.Drawing.Point(87, 347);
+            this.pinTextBox.Location = new System.Drawing.Point(44, 180);
+            this.pinTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pinTextBox.Multiline = true;
             this.pinTextBox.Name = "pinTextBox";
-            this.pinTextBox.Size = new System.Drawing.Size(398, 59);
+            this.pinTextBox.Size = new System.Drawing.Size(201, 33);
             this.pinTextBox.TabIndex = 4;
             this.pinTextBox.TextChanged += new System.EventHandler(this.pinTextBox_TextChanged);
             // 
@@ -94,9 +100,10 @@
             this.loginButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(171, 452);
+            this.loginButton.Location = new System.Drawing.Point(86, 235);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(216, 71);
+            this.loginButton.Size = new System.Drawing.Size(108, 37);
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -106,9 +113,10 @@
             // 
             this.signUpLinkLabel.AutoSize = true;
             this.signUpLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpLinkLabel.Location = new System.Drawing.Point(216, 596);
+            this.signUpLinkLabel.Location = new System.Drawing.Point(108, 310);
+            this.signUpLinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.signUpLinkLabel.Name = "signUpLinkLabel";
-            this.signUpLinkLabel.Size = new System.Drawing.Size(113, 29);
+            this.signUpLinkLabel.Size = new System.Drawing.Size(62, 15);
             this.signUpLinkLabel.TabIndex = 6;
             this.signUpLinkLabel.TabStop = true;
             this.signUpLinkLabel.Text = "Sign Up!";
@@ -118,36 +126,39 @@
             // 
             this.orLabel.AutoSize = true;
             this.orLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orLabel.Location = new System.Drawing.Point(251, 552);
+            this.orLabel.Location = new System.Drawing.Point(126, 287);
+            this.orLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.orLabel.Name = "orLabel";
-            this.orLabel.Size = new System.Drawing.Size(45, 25);
+            this.orLabel.Size = new System.Drawing.Size(25, 13);
             this.orLabel.TabIndex = 7;
             this.orLabel.Text = "OR";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(186, 542);
+            this.label1.Location = new System.Drawing.Point(93, 282);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 25);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "____";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 542);
+            this.label2.Location = new System.Drawing.Point(151, 282);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 25);
+            this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "____";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(580, 665);
+            this.ClientSize = new System.Drawing.Size(290, 346);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.orLabel);
@@ -158,6 +169,8 @@
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.loginLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.ResumeLayout(false);

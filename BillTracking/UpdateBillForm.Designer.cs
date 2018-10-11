@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateBillForm));
             this.AmountTextBox = new System.Windows.Forms.TextBox();
             this.AmountLabel = new System.Windows.Forms.Label();
             this.BillDateTime = new System.Windows.Forms.DateTimePicker();
@@ -161,6 +162,7 @@
             this.Controls.Add(this.namelabel);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.SaveButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdateBillForm";
             this.Text = "Update Bill!";
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArchivesForm));
             this.label1 = new System.Windows.Forms.Label();
             this.archivesListBox = new System.Windows.Forms.ListBox();
             this.restoreButton = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             this.archivesListBox.FormattingEnabled = true;
             this.archivesListBox.ItemHeight = 15;
             this.archivesListBox.Location = new System.Drawing.Point(19, 88);
-            this.archivesListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.archivesListBox.Margin = new System.Windows.Forms.Padding(2);
             this.archivesListBox.Name = "archivesListBox";
             this.archivesListBox.Size = new System.Drawing.Size(385, 169);
             this.archivesListBox.TabIndex = 1;
@@ -62,7 +63,7 @@
             this.restoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restoreButton.ForeColor = System.Drawing.Color.White;
             this.restoreButton.Location = new System.Drawing.Point(314, 271);
-            this.restoreButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.restoreButton.Margin = new System.Windows.Forms.Padding(2);
             this.restoreButton.Name = "restoreButton";
             this.restoreButton.Size = new System.Drawing.Size(88, 38);
             this.restoreButton.TabIndex = 2;
@@ -92,7 +93,8 @@
             this.Controls.Add(this.restoreButton);
             this.Controls.Add(this.archivesListBox);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ArchivesForm";
             this.Text = "Archived Bills";
             this.ResumeLayout(false);
